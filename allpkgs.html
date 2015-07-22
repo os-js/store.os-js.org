@@ -13,6 +13,24 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+
+    $(function() {
+
+
+   var pkgs = [];
+
+   $.getJSON('packages.json', function(data) {
+       $.each(data.packages, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.className + "</td>" +
+           "<td>" + f.name + "</td>" + "<td>" + f.description + "</td>" + "<td>" + f.category + "</td>" + "<td>" + f.author + "</td>" + "<td>" + f.version + "</td>" + "<td>" + f.download + "</td>"+ "</tr>"
+           $(tblRow).appendTo("#pgkdata tbody");
+     });
+
+   });
+
+});
+</script>
 </head>
 
 <body>
@@ -30,45 +48,26 @@
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br>
-      <br>
-      <h1 class="header center orange-text">Welcome to the OS.js Web Store</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Discover, install, and create OS.js Applications</h5>
-      </div>
-      <div class="row center">
-        <a id="download-button" class="btn-large waves-effect waves-light orange">Get Searching</a>
-      </div>
-      <br>
-      <br>
+      <table id="pkgdata" class="centered">
+        <thead>
+          <tr>
+            <th data-field="className">Class Name</th>
+            <th data-field="name">Name</th>
+            <th data-field="description">Description</th>
+            <th data-field="category">Category</th>
+            <th data-field="author">Author</th>
+            <th data-field="version">Version</th>
+            <th data-field="download">Download</th>
+          </tr>
+        </thead>
+        <tbody>
 
+        </tbody>
+      </table>
+      <br></br>
+      <br></br>
     </div>
   </div>
-
-
-  <div class="container">
-    <div class="section">
-      <nav>
-        <div class="nav-wrapper">
-          <form>
-            <div class="input-field">
-              <input id="search" type="search" required>
-              <label for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div>
-          </form>
-        </div>
-      </nav>
-
-    </div>
-    <br>
-    <br>
-
-    <div class="section">
-
-    </div>
-  </div>
-
   <footer class="page-footer">
     <div class="container">
       <div class="row">
