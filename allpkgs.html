@@ -13,24 +13,6 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script>
-
-    $(function() {
-
-
-   var pkgs = [];
-
-   $.getJSON('packages.json', function(data) {
-       $.each(data.packages, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.className + "</td>" +
-           "<td>" + f.name + "</td>" + "<td>" + f.description + "</td>" + "<td>" + f.category + "</td>" + "<td>" + f.author + "</td>" + "<td>" + f.version + "</td>" + "<td>" + f.download + "</td>"+ "</tr>"
-           $(tblRow).appendTo("#pgkdata tbody");
-     });
-
-   });
-
-});
-</script>
 </head>
 
 <body>
@@ -94,8 +76,27 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="../../bin/materialize.js"></script>
+  <script src="js/materialize.js"></script>
+  <!--
   <script src="js/init.js"></script>
+  -->
+  <script>
+
+  $(function() {
+     $.getJSON('packages.json', function(data) {
+       var table = $("#pkgdata tbody");
+       $.each(data, function(i, f) {
+          var link = "<a href=\"" + f.download + "\">Link</a>";
+          var row = "<tr>" + "<td>" + f.className + "</td>" +
+                    "<td>" + f.name + "</td>" + "<td>" + f.description + "</td>" + "<td>" + f.category + "</td>" + "<td>" + f.author + "</td>" + "<td>" + f.version + "</td>" + "<td>" + link + "</td>"+ "</tr>"
+
+        table.append(row);
+       });
+
+     });
+
+  });
+  </script>
 
 </body>
 
