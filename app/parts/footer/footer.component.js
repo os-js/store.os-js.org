@@ -3,7 +3,7 @@ angular.
   module('appFooter').
   component('appFooter', {
     templateUrl: 'app/parts/footer/footer.template.html',
-    controller: function ($scope) {
+    controller: function () {
 
     }
   });

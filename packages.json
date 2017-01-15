@@ -6,6 +6,22 @@
     "category": "system",
     "author": "andersevenrud@gmail.com",
     "version": "1.0",
-    "download": "http://andersevenrud.github.io/OS.js-v2/store/packages/Test.zip"
+    "download": "http://91.247.228.125/store/packages/Test.zip"
+  },
+  {
+    "className": "ApplicationMap",
+    "name": "GoogleMaps",
+    "description": "Google Maps",
+    "author": "https://github.com/khoaakt",
+    "version": "1.0",
+    "download": "http://91.247.228.125/store/packages/GoogleMaps.zip"
+  },
+  {
+    "className": "ApplicationCalendar",
+    "name": "Calendar",
+    "description": "Calendar",
+    "author": "https://github.com/khoaakt",
+    "version": "1.0",
+    "download": "http://91.247.228.125/store/packages/Calendar.zip"
   }
 ]

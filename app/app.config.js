@@ -6,7 +6,7 @@ angular.
 
       $routeProvider.
         when('/home', {
-          template: '<app-nav></app-nav><home-view></home-view><app-footer></app-footer>'
+          template: '<home-view></home-view>'
         }).
         when('/packages', {
           template: '<phone-detail></phone-detail>'

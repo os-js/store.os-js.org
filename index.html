@@ -15,9 +15,11 @@
 </head>
 
 <body class="main" ng-app="storeApp">
-
-    <div class="main-content" ng-view></div>
-
+  <div class="main-content">
+    <app-nav></app-nav>
+    <div ng-view></div>
+  </div>
+  <app-footer></app-footer>
   <!--  Scripts-->
 
   <!--Import jQuery before anything else-->
@@ -38,13 +40,15 @@
   <!--get app components and modules-->
   <script type="text/javascript" src="app/parts/nav/nav.module.js"></script>
   <script type="text/javascript" src="app/parts/nav/nav.component.js"></script>
-  
+
   <script type="text/javascript" src="app/parts/footer/footer.module.js"></script>
   <script type="text/javascript" src="app/parts/footer/footer.component.js"></script>
 
   <script type="text/javascript" src="app/views/home/home.module.js"></script>
   <script type="text/javascript" src="app/views/home/home.component.js"></script>
 
+  <script type="text/javascript" src="app/parts/search/search.module.js"></script>
+  <script type="text/javascript" src="app/parts/search/search.component.js"></script>
 
 </body>
 

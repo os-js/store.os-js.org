@@ -1,0 +1,29 @@
+<div class="uk-grid-small uk-child-width-1-2@s uk-flex-center uk-text-center" uk-grid>
+  <div class="uk-section">
+    <form>
+      <fieldset class="uk-fieldset uk-child-width-1-2@s">
+        <div class="uk-inline">
+          <input ng-model="$ctrl.search" class="uk-input" type="text" placeholder="Search">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<div ng-show="$ctrl.search" class="uk-grid-small uk-child-width-1-2@s uk-flex-center uk-text-center" uk-grid>
+  <table class="uk-table uk-table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="uk-text-center">Category</th>
+        <th class="uk-text-center">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="pkg in $ctrl.packages | filter: $ctrl.search | limitTo: 5">
+        <td class="uk-table-shrink uk-text-center"><img class="uk-preserve-width" width="40" src="/img/osjs-icon.png" /></td>
+        <td class="uk-table-shrink"><span>{{pkg.category}}</span></td>
+        <td class="uk-table-expand"><span class="uk-text-center uk-text-middle">{{pkg.name}}</span></td>
+      </tr>
+  </table>
+</div>
