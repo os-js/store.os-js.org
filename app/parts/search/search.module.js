@@ -1,2 +1,2 @@
-// Define the `appNav` module
+// Define the `appSearch` module
 angular.module('appSearch', []);

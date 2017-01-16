@@ -1,4 +1,4 @@
-// Register the `appNav` component on the `appFooterfooter` module,
+// Register the `searchBox` component on the `appSearch` module,
 angular.
   module('appSearch').
   component('searchBox', {
