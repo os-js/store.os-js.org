@@ -17,7 +17,7 @@ Simple web app to browse, install and submit application for the OS.js project
 * Front page search needs to match *just* the name of the package not all info.
 
 ## How to run
-  ### lite-server (for development)
+  lite-server (for development)
   ***this method requires node and npm***
 
 ```
