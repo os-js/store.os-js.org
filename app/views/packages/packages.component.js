@@ -12,12 +12,15 @@ angular
 //Helpers
 
 function getPackages($http) {
-  //Get packages from json source (async)
   return new Promise((resolve, reject) => {
+    //Get the packages.json file
     $http.get('packages.json')
       .then(function (res) {
-        console.log(res.data);
+        //Return the data 
         resolve(res.data);
+      }, (err) => {
+        //Or reject if we've hit a snag.
+        reject(err);
       });
   })
-}
+};
