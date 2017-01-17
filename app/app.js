@@ -3,5 +3,6 @@ var storeApp = angular.module('storeApp', [
   'appNav',
   'appFooter',
   'homeView',
-  'appSearch'
+  'appSearch',
+  'packageView'
 ]);

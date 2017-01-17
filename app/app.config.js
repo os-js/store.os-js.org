@@ -9,7 +9,8 @@ angular.
           template: '<home-view></home-view>'
         }).
         when('/packages', {
-          template: '<phone-detail></phone-detail>'
+          templateUrl: 'app/views/packages/packages.template.html',
+          controller: 'pkgController'
         }).
         otherwise('/home');
     }
