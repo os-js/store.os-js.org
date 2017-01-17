@@ -10,5 +10,14 @@
 }
 
 .osjs-header {
-    background: url('../img/header.png')
+    background: url('../img/header.png');
+}
+
+.header-logo {
+  height: 80%;
+  padding-right: 1em;
+}
+
+.bg-flat {
+  background: #83529c;
 }
