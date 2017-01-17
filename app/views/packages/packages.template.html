@@ -1,0 +1,18 @@
+<div ng-controller="pkgController" class="uk-container">
+  <h2 class="uk-padding-small">All packages</h2>
+  <table class="uk-table uk-table-hover uk-padding-small">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="uk-text-center">Name</th>
+        <th class="uk-text-center">Description</th>
+      </tr>
+    </thead>
+    <tbody">
+      <tr ng-repeat="p in packages">
+        <td class="uk-table-shrink uk-text-center"><img class="uk-preserve-width" width="40" src="/img/osjs-icon.png" /></td>
+        <td class="uk-table-shrink"><span>{{p.name}}</span></td>
+        <td class="uk-table-expand"><span class="uk-text-center uk-text-middle">{{p.description}}</span></td>
+      </tr>
+  </table>
+</div>
