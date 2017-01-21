@@ -11,10 +11,10 @@
 </div>
 
 <div ng-show="$ctrl.search" class="uk-child-width-1-5@s uk-flex-center" uk-grid>
-  <div ng-repeat="pkg in $ctrl.packages | filter: $ctrl.search | limitTo: 3">
-    <div class="uk-card uk-card-default uk-animation-fade uk-animation-fast uk-card-body">
-      <div class="uk-text-center"><img class="uk-preserve-width" width="40" src="/img/osjs-icon.png" /></div>
-      <p class="uk-text-center uk-text-middle">{{pkg.name}}</p>
+  <div ng-repeat="pkg in $ctrl.packages | filter:{name: $ctrl.search}">
+    <div class=" uk-card uk-card-default uk-animation-fade uk-animation-fast uk-card-body ">
+      <div class="uk-text-center "><img class="uk-preserve-width " width="40 " src="/img/osjs-icon.png " /></div>
+      <p class="uk-text-center uk-text-middle ">{{pkg.name}}</p>
     </div>
   </div>
 </div>

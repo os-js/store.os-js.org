@@ -1,2 +1,2 @@
 // Define the `appNav` module
-angular.module('appNav', []);
+angular.module('appNav', ['ngRoute']);
