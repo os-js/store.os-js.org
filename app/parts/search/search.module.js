@@ -1,2 +1,4 @@
-// Define the `appSearch` module
+/**
+  App Search Module
+*/
 angular.module('appSearch', []);

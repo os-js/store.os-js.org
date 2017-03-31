@@ -2,8 +2,5 @@
 angular.
   module('appFooter').
   component('appFooter', {
-    templateUrl: 'app/parts/footer/footer.template.html',
-    controller: function () {
-
-    }
+    templateUrl: 'app/parts/footer/footer.template.html'
   });
